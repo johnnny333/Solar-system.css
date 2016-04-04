@@ -1,0 +1,587 @@
+body {
+  overflow-y: hidden;
+  background-color: #191963;
+  margin: 0.01em;
+}
+
+h1 {
+  font-family: Helvetica;
+  color: #E6E6A0;
+  font-weight: bold;
+  font-size: 4.5em;
+  font-variant: small-caps;
+  text-shadow: 2px 2px grey;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: absolute;
+  z-index: -11;
+  margin-top: 5.4em;
+  margin-left: -1.7em;
+}
+
+#sun {
+  height: 4em;
+  width: 4em;
+  display: block;
+  border-radius: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: -webkit-linear-gradient(left top, orange , yellow);
+ /* For Safari */
+  background: -o-linear-gradient(bottom right, orange, yellow);
+ /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, orange, yellow);
+ /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, orange 25%, yellow 75%);
+ /* Standard syntax */
+  transition: height 1s,width 1s;
+  -webkit-transition: height 1s,width 1s;
+ /* Safari */
+  box-shadow: 2px 2px 60px 20px orange;
+}
+
+#sun:hover {
+  height: 4.9em;
+  width: 4.9em;
+}
+
+#mercury-orbit {
+  height: 8em;
+  width: 8em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  z-index: -1;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 5s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 5s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#mercury {
+  height: 1em;
+  width: 1em;
+  background-color: #FFBF94;
+  border-radius: 100px;
+  z-index: -1;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#mercury-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#mercury-orbit:hover #mercury {
+  height: 1.7em;
+  width: 1.7em;
+}
+
+#venus-orbit {
+  height: 11.5em;
+  width: 11.5em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  z-index: -2;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 8s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 8s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#venus {
+  height: 1em;
+  width: 1em;
+  background-color: #FFF0F0;
+  border-radius: 100px;
+  z-index: -2;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#venus-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#venus-orbit:hover #venus {
+  height: 1.7em;
+  width: 1.7em;
+}
+
+#earth-orbit {
+  height: 15em;
+  width: 15em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  z-index: -3;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 12s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 12s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#earth {
+  height: 1em;
+  width: 1em;
+  background-color: #6666FF;
+  border-radius: 100px;
+  z-index: -3;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#moon {
+  height: 0.3em;
+  width: 0.3em;
+  background-color: #FFFFE0;
+  border-radius: 100px;
+  z-index: -4;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -177%;
+  right: 0%;
+}
+
+#moon-radius {
+  height: 1em;
+  width: 1em;
+  border-radius: 100%;
+  border-width: 1px;
+  z-index: -4;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 2s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 2s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#earth-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#earth-orbit:hover #earth {
+  height: 1.7em;
+  width: 1.7em;
+}
+
+#mars-orbit {
+  height: 19em;
+  width: 19em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  background-color: #191963;
+  z-index: -5;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 20s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 20s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#mars {
+  height: 1em;
+  width: 1em;
+  background-color: #FF6262;
+  border-radius: 100px;
+  z-index: -5;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#mars-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#mars-orbit:hover #mars {
+  height: 1.7em;
+  width: 1.7em;
+}
+
+#asteroids {
+  height: 22.6em;
+  width: 22.6em;
+  border-radius: 100%;
+  border-width: 1px;
+  background: url(asteroids1.svg);
+  background-size: 35px 35px;
+  background-repeat: repeat;
+  z-index: -7;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 50s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 50s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#jupiter-orbit {
+  height: 23em;
+  width: 23em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  z-index: -6;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 30s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 30s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#jupiter {
+  height: 1em;
+  width: 1em;
+  background-color: #FFFFA9;
+  border-radius: 100px;
+  z-index: -6;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#jupiter-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#jupiter-orbit:hover #jupiter {
+  height: 1.7em;
+  width: 1.7em;
+}
+
+#saturn-orbit {
+  height: 27em;
+  width: 27em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  z-index: -7;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 60s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 60s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#saturn {
+  margin-left: -1em;
+  margin-top: 12.8em;
+}
+
+#saturn-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#saturn-orbit:hover #saturn {
+  height: 2.5em;
+  width: 2.5em;
+}
+
+#uranus-orbit {
+  height: 31em;
+  width: 31em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  background-color: #191963;
+  z-index: -8;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 70s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 70s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#uranus {
+  height: 1em;
+  width: 1em;
+  background-color: #33CCFF;
+  border-radius: 100px;
+  z-index: -8;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#uranus-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#uranus-orbit:hover #uranus {
+  height: 1.7em;
+  width: 1.7em;
+}
+
+#neptun-orbit {
+  height: 35em;
+  width: 35em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  background-color: #191963;
+  z-index: -9;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 100s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 100s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#neptun {
+  height: 1em;
+  width: 1em;
+  background-color: #6666FF;
+  border-radius: 100px;
+  z-index: -9;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#neptun-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#neptun-orbit:hover #neptun {
+  height: 1.7em;
+  width: 1.7em;
+}
+
+#pluto-orbit {
+  height: 39em;
+  width: 39em;
+  border-color: grey;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 1px;
+  background-color: #191963;
+  z-index: -10;
+	/*WEBKIT*/
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -webkit-animation-duration: 120s;
+	/*IE*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 120s;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+#pluto {
+  height: 1em;
+  width: 1em;
+  background-color: #8D1919;
+  border-radius: 100px;
+  z-index: -10;
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: -100%;
+  right: 0%;
+}
+
+#pluto-orbit:hover {
+  border-color: orange;
+  border-width: 2px;
+}
+
+#pluto-orbit:hover #pluto {
+  height: 1.7em;
+  width: 1.7em;
+}	
+	
+/*WEBKIT*/
+@-webkit-keyframes orbit {
+ 
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/*IE*/
+@keyframes orbit {
+ 
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
