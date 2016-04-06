@@ -162,6 +162,7 @@ h1 {
   height: 19em;
   width: 19em;
   z-index: -5;
+  background-color: #191963;
 	/*WEBKIT*/
   -webkit-animation-duration: 20s;
 	/*IE*/
