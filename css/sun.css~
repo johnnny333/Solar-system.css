@@ -4,7 +4,7 @@ body {
 /*   margin: 0.01em; */
 }
 
-body > h1 {
+h1 {
   font-family: Helvetica;
   color: #E6E6A0;
   font-weight: bold;
@@ -20,16 +20,8 @@ body > h1 {
   z-index: -11;
   margin: 0;
   float: left;
-  top: 45%;
-
+  top: 43%;
 }
-
-@media only screen and (max-width: 1140px) {
-    body h1 {
-       display: none;
-    }
-}
-
 
 #sun {
   height: 4em;
@@ -60,7 +52,6 @@ body > h1 {
   height: 4.9em;
   width: 4.9em;
 }
-
 
 #mercury-orbit, #venus-orbit, #earth-orbit, #moon-radius,
 #mars-orbit, #asteroids, #jupiter-orbit, #saturn-orbit,
@@ -184,6 +175,7 @@ body > h1 {
   z-index: -5;
 }
 
+/* TODO  */
 #asteroids {
   height: 22.6em;
   width: 22.6em;
