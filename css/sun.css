@@ -16,10 +16,11 @@ h1 {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  position: absolute;
+   position: absolute;
   z-index: -11;
-  margin-top: 5.4em;
-  margin-left: -1.7em;
+  margin: 0;
+  float: left;
+  top: 43%;
 }
 
 #sun {
@@ -179,7 +180,7 @@ h1 {
   height: 22.6em;
   width: 22.6em;
   border-style: none;
-  background: url(asteroids1.svg);
+  background: url(../images/asteroids1.svg);
   background-size: 35px 35px;
   background-repeat: repeat;
   z-index: -7;
